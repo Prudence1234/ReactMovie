@@ -1,0 +1,31 @@
+.genre {
+  box-sizing: border-box;
+  width: 100%;
+  color: #fff;
+  background-color: #000;
+}
+
+.genreHeader {
+  width: 100%;
+  padding: 1% 5%;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.genreHeader div {
+  font-size:20px;
+  font-weight:400 ;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.genreSeeAll {
+    color: #4B98C4;
+}
+
+.movieContainer {
+    padding: 5%;
+}
