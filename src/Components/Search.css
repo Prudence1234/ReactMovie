@@ -1,13 +1,15 @@
 .search {
     height: 100vh;
     width: 100vw;
-    top: 50%;
+    background-image: linear-gradient(to right, grey , black);
     
 }
 input{
     width: 30%;
     height: auto;
-    padding: 8px;
+    padding: 15px;
     border: 1px solid black;
     border-radius: 10px;
+    margin: 200px;
+    margin-left: 500px;
 }

@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import "./MenuBar.css"
-
-
+import React from 'react'
 const MenuBar = () => {
   return (
     <div>

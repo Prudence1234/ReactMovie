@@ -1,10 +1,10 @@
 import React ,{useEffect, useState} from 'react';
 import './MovieCard.css'
 import StarRating from './StarRating';
-
+import { Movie } from '../types';
 
 const Drama = () => {
-  const [data ,setData]=useState([]);
+  const [data ,setData]=useState<Movie[]>([]);
 
      useEffect(() => {
       fetch('http://localhost:5002/api/v1/movies/search?genre=Drama') 

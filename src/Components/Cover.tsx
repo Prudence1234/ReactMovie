@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
+
+
 import './Cover.css'
-class Cover extends Component {
-  render() {
+export default function Cover() {
     return (
       <div className="cover">
         <img
@@ -14,7 +15,5 @@ class Cover extends Component {
         </div>
       </div>
     )
-  }
+  
 }
-
-export default Cover

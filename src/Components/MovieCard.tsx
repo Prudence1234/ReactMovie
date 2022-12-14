@@ -3,14 +3,11 @@ import { Link, Routes,Route, Router } from "react-router-dom";
 
 import './MovieCard.css'
 import StarRating from './StarRating';
-import MovieInfo from './MovieInfo'
+import { Movie } from '../types';
 
-
-// import { useNavigate } from 'react-router-dom'
 
 const MovieCard = () => {
-  const [data, setData] = useState([]);
-
+  const [data, setData] = useState <Movie[]>([]);
   useEffect(() => {
     fetch('http://localhost:5002/api/v1/movies/search?genre=Comedy')
       .then((response) => response.json())
@@ -31,16 +28,19 @@ const MovieCard = () => {
 
   // getAPI();
   const scrollToEnd = () => {
-    document.getElementById(
+    (document.getElementById(
       'scroll_category_listing',
-    ).scrollLeft += 1000
+    ) as HTMLDivElement).scrollLeft += 1000
   }
 
   const scrollToStart = () => {
-    document.getElementById(
+    (document.getElementById(
       'scroll_category_listing',
-    ).scrollLeft -= 1000
+    )as HTMLDivElement).scrollLeft -= 1000
   }
+  
+  
+
 
   // const getMovieInfo = (id) => {
   //   var movieLink = "/MovieInfo" + id ;

@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css'
 
 import Cover from './Components/Cover'
-import Mylist from "./Components/Mylist";
+import Mylist from "./redux/Mylist";
 import Genres from "./Components/Genres";
 import Search from "./Components/Search";
 import Movies from "./Components/Movies";
@@ -10,6 +10,7 @@ import Tvshow from "./Components/Tvshow";
 import MovieInfo from "./Components/MovieInfo";
 
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+
 
 // import MovieCard from './Components/MovieCard'
 
@@ -33,8 +34,9 @@ function App() {
           <Route exact path="/Search" element={<Search />} />
           <Route exact path="/Movies" element={<Movies />} />
           <Route exact path="/Tvshows" element={<Tvshow />} />
-          <Route path="/Mylist" element={<Mylist />} />
           <Route path="/id/:id" element={<MovieInfo />} />
+          <Route path="/Mylist" element={<Mylist />} />
+
         </Routes>
       </BrowserRouter>
 
