@@ -17,6 +17,6 @@ export interface Movie {
     directors: string[]
     fullplot: string
     rated:string | number
-    elementById: string
+    
 
 }

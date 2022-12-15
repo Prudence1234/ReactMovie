@@ -30,10 +30,10 @@ function App() {
       <BrowserRouter>
 
         <Routes>
-          <Route exact path="/" element={<Genres />} />
-          <Route exact path="/Search" element={<Search />} />
-          <Route exact path="/Movies" element={<Movies />} />
-          <Route exact path="/Tvshows" element={<Tvshow />} />
+          <Route path="/" element={<Genres />} />
+          <Route path="/Search" element={<Search />} />
+          <Route path="/Movies" element={<Movies />} />
+          <Route path="/Tvshows" element={<Tvshow />} />
           <Route path="/id/:id" element={<MovieInfo />} />
           <Route path="/Mylist" element={<Mylist />} />
 

@@ -45,31 +45,31 @@ const MovieInfo = () => {
 
   return (
     <div>
-    <div className='info'>
-    {data == null ?
-     <span></span>
-    :
-    <img src={data.poster} className='infoposter' />
-    }   
-        <div>
-          <h4 >{data!.title}</h4>
-          <small>{data!.year}</small>
-          <br />
-          <small> Rated: {data!.rated}</small>
-          <p>{data!.fullplot}</p>
-          <p>Director: {data!.directors}</p>
-          {data!.tomatoes && (
-            <a href={data!.tomatoes.website} target="_blank"> <button><i className="fa-sharp fa-solid fa-play"></i> <br />Play</button></a>
-          )
-          }
-          <button aria-label="Increment value"
-            onClick={() => dispatch(addMovie({data: data}))}> <i className="fa-regular fa-plus"></i> <br />My List </button>
+      <div>
+        {data == null ?
+          <span></span>
+          :
+          <div className='info'>
+            <img src={data.poster} className='infoposter' />
+            <div className='flex'>
+              <h4 >{data!.title}</h4>
+              <small>{data!.year}</small>
+              <br />
+              <small> Rated: {data!.rated}</small>
+              <p>{data!.fullplot}</p>
+              <p>Director: {data!.directors}</p>
+              {data!.tomatoes && (
+                <a href={data!.tomatoes.website} target="_blank"> <button><i className="fa-sharp fa-solid fa-play"></i> <br />Play</button></a>
+              )
+              }
+              <button aria-label="Increment value"
+                onClick={() => dispatch(addMovie({ data: data }))}> <i className="fa-regular fa-plus"></i> <br />My List </button>
 
-          <button aria-label="Decrement value"
-            onClick={() => dispatch(removeMovie(id))}>Remove from Mylist</button>
- 
-
-        </div>
+              <button aria-label="Decrement value"
+                onClick={() => dispatch(removeMovie(id))}>Remove from Mylist</button>
+            </div>
+          </div>
+        }
       </div>
 
     </div>

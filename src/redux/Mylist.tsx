@@ -44,10 +44,11 @@
 // }
  import React from 'react'
  import { useSelector , useDispatch } from 'react-redux'
- 
+ import { Movie } from '../types'
+
  const Mylist = () => {
-   const CartMovies = useSelector((state) => state.list_movies.value)
-   const names = CartMovies.map((data, index) => {
+   const CartMovies = useSelector((state) => (state as any).list_movies.value)
+   const names = CartMovies.map((data: Movie, index: number) => {
   return (<div key={data._id}>
     <h3>{data.title}</h3>
     <span>{data.rated}</span>
@@ -55,7 +56,7 @@
   })
    return (
      <div>   
-     CART:
+     My List:
      {names}
      </div>
    )
